@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание на неделю</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Расписание Лицеиста</a>
+            <!-- Остальная часть навигационной панели -->
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="container mt-4">
+        <h2 class="text-center">Расписание для класса {{ class_name }} на неделю</h2>
+
+        {% for day, day_schedule in weekly_schedule.items() %}
+            <h3>{{ day | capitalize }}</h3>
+            <table class="table table-hover schedule-table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Время</th>
+                        <th scope="col">Предмет</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for time, subject in day_schedule %}
+                    <tr>
+                        <td>{{ time }}</td>
+                        <td>{{ subject }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endfor %}
+
+        <!-- Кнопка "Вернуться на главную" -->
+        <div class="text-center">
+            <a href="{{ url_for('home') }}" class="btn btn-primary mt-3">Вернуться на главную</a>
+        </div>
+    </div>
+
+    <!-- Подвал, аналогичный front.html -->
+    <footer class="footer bg-dark text-white py-3">
+        <div class="container">
+            <p class="text-center mb-0">© 2023 Расписание Лицеиста</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Night Theme Styles -->
+    <style>
+        body {
+            background-color: #202124; /* Dark background */
+            color: #e8eaed; /* Light text */
+        }
+        .navbar {
+            background-color: #303134;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            color: #8ab4f8; /* Light blue label text */
+        }
+        input.form-control {
+            background-color: #303134; /* Dark input background */
+            color: #e8eaed; /* Light input text */
+        }
+        .btn-primary {
+            background-color: #8ab4f8; /* Light blue button */
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #5f88e0; /* Slightly darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Panel -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Расписание Лицеиста</a>
+        </div>
+    </nav>
+
+    <!-- Login Form -->
+    <div class="container mt-4">
+        <h2>Вход</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="user_id">Номер класса и буква или "teacher" для входа как учитель</label>
+                <input type="text" class="form-control" id="user_id" name="user_id" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Войти</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

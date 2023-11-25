@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видеоуроки</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Видеоуроки</h1>
+    <div class="video-container">
+        {% for video in videos %}
+            <iframe width="560" height="315" src="{{ video }}" frameborder="0" allowfullscreen></iframe>
+        {% endfor %}
+    </div>
+</body>
+</html>

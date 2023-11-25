@@ -1,0 +1,111 @@
+/* style.css */
+
+/* Основные стили для тёмной темы */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #202124; /* Темный фон */
+    color: #e8eaed; /* Светлый текст */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка */
+.navbar {
+    background-color: #303134;
+    border-bottom: 1px solid #5f6368;
+    padding: 0.5rem 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #e8eaed;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+    color: #8ab4f8;
+}
+
+.nav-link {
+    color: #e8eaed;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #8ab4f8;
+}
+
+/* Основной контент */
+.container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #303134;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Обновленные стили для jumbotron */
+.jumbotron {
+    background-color: transparent; /* Прозрачный фон */
+    color: #e8eaed; /* Светлый текст */
+    padding: 2rem 2rem; /* Поля внутри jumbotron */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1.display-4 {
+    color: #8ab4f8; /* Цвет заголовка */
+}
+
+/* Стили для таблицы */
+.schedule-table {
+    background-color: #303134; /* Фон таблицы */
+    color: #e8eaed; /* Цвет текста таблицы */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.schedule-table thead th {
+    background-color: #5f6368; /* Фон заголовка таблицы */
+    color: #e8eaed; /* Цвет текста заголовка таблицы */
+    padding: 10px;
+    text-align: left;
+}
+
+.schedule-table td, .schedule-table th {
+    border: 1px solid #5f6368; /* Границы ячеек */
+    padding: 10px;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #202124; /* Чередование цветов строк */
+}
+
+.schedule-table tr:hover {
+    background-color: #575757; /* Цвет фона при наведении */
+}
+
+.schedule-table td {
+    transition: background-color 0.3s ease;
+}
+
+/* Стили для кнопок и ссылок в таблице, если нужно */
+.schedule-table a {
+    color: #8ab4f8;
+    text-decoration: none;
+}
+
+.schedule-table a:hover {
+    color: #5f88e0;
+}
+
+.btn-primary {
+    background-color: #5f6368; /* Цвет фона кнопки */
+    border-color: #5f6368; /* Цвет границы кнопки */
+}
+
+.btn-primary:hover {
+    background-color: #575757; /* Цвет фона при наведении */
+    border-color: #575757;
+}
