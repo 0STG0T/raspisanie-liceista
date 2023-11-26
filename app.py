@@ -14,9 +14,6 @@ ALLOWED_EXTENSIONS = {'docx'}
 
 classes = ['11А', '11Б', '10А', '10Б', '9А', '9Б', '8А', '8Б', '7А', '7Б']  # Добавьте другие классы
 
-chat_ids = ['803006666']
-TOKEN = '6361532905:AAFGIBmPOBrgxk77F-mBJGlQz-7QAZaxJKk'
-
 # Установка локали для корректного отображения дней недели на русском языке
 locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')
 
